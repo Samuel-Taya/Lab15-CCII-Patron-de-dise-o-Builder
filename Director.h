@@ -4,18 +4,18 @@
 class Director
 {
 private:
-    IBuilder *builder;
+    IBuilder *builder; // se crea un objeto apuntador tipo IBuilder builder
 
 public:
     void set_builder(IBuilder *builder)
     {
         this->builder = builder;
     }
-    void BuildProductoMin()
+    void BuildProductoMin() // se hace uso de la funcion ProducirParteA();
     {
         this->builder->ProducirParteA();
     }
-    void BuildProductoCompleto()
+    void BuildProductoCompleto() // se dan funciones a ejecutar
     {
         this->builder->ProducirParteA();
         this->builder->ProducirParteB();
